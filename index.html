@@ -1,0 +1,1533 @@
+!DOCTYPE html
+html lang=ru
+head
+    meta charset=UTF-8
+    meta name=viewport content=width=device-width, initial-scale=1.0
+    titleKeyCraft — Каталог кастомных механических клавиатур и комплектующихtitle
+    !-- Bootstrap 4.6.2 CSS --
+    link rel=stylesheet href=httpscdn.jsdelivr.netnpmbootstrap@4.6.2distcssbootstrap.min.css
+    !-- FontAwesome 5 --
+    link rel=stylesheet href=httpscdnjs.cloudflare.comajaxlibsfont-awesome5.15.4cssall.min.css
+    !-- Шрифт Inter --
+    link href=httpsfonts.googleapis.comcss2family=Interwght@400;500;600;700;800&display=swap rel=stylesheet
+
+    style
+        body {
+            font-family 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif;
+            background-color #f8fafc;
+            color #1e293b;
+            display flex;
+            flex-direction column;
+            min-height 100vh;
+        }
+
+         Верхний информационный топ-бар 
+        .top-info-bar {
+            background-color #0f172a;
+            color #94a3b8;
+            font-size 0.8rem;
+            border-bottom 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .top-info-bar a {
+            color #cbd5e1;
+            text-decoration none;
+            transition color 0.15s ease;
+        }
+
+        .top-info-bar ahover {
+            color #ffffff;
+        }
+
+         Сквозная шапка сайта (Header) 
+        .site-header {
+            background-color #ffffff;
+            border-bottom 1px solid #e2e8f0;
+        }
+
+        .logo-badge {
+            width 46px;
+            height 46px;
+            border-radius 12px;
+            background linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            color #fff;
+            display flex;
+            align-items center;
+            justify-content center;
+            font-size 1.3rem;
+            box-shadow 0 4px 12px rgba(79, 70, 229, 0.25);
+        }
+
+         Навигационное меню Bootstrap 4 
+        .site-navbar {
+            background #1e293b;
+            box-shadow 0 4px 12px rgba(15, 23, 42, 0.08);
+        }
+
+        .site-navbar .nav-link {
+            color rgba(255, 255, 255, 0.82) !important;
+            font-weight 500;
+            padding 0.65rem 1.05rem !important;
+            border-radius 8px;
+            margin-right 0.3rem;
+            transition all 0.2s ease;
+        }
+
+        .site-navbar .nav-linkhover {
+            color #ffffff !important;
+            background-color rgba(255, 255, 255, 0.08);
+        }
+
+        .site-navbar .nav-item.active .nav-link {
+            color #ffffff !important;
+            background-color #4f46e5;
+            box-shadow 0 2px 8px rgba(79, 70, 229, 0.4);
+        }
+
+         Герой-баннер (Jumbotron) 
+        .hero-jumbotron {
+            background linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%);
+            color #ffffff;
+            border-radius 18px;
+            padding 3.25rem 2.5rem;
+            position relative;
+            overflow hidden;
+            box-shadow 0 16px 32px -10px rgba(30, 27, 75, 0.35);
+            border 1px solid rgba(129, 140, 248, 0.2);
+        }
+
+        .rgb-glow-frame {
+            background rgba(15, 23, 42, 0.65);
+            border 1px solid rgba(129, 140, 248, 0.3);
+            border-radius 14px;
+            padding 1rem;
+            box-shadow 0 0 28px rgba(99, 102, 241, 0.25);
+        }
+
+         Круглые иконки преимуществ 
+        .feature-icon-circle {
+            width 76px;
+            height 76px;
+            border-radius 50%;
+            background #eef2ff;
+            color #4f46e5;
+            border 2px solid #c7d2fe;
+            display inline-flex;
+            align-items center;
+            justify-content center;
+            font-size 1.7rem;
+            margin-bottom 1rem;
+            transition transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+        }
+
+        .feature-boxhover .feature-icon-circle {
+            transform translateY(-4px);
+            background #4f46e5;
+            color #ffffff;
+            border-color #4f46e5;
+        }
+
+         Карточки сборок 
+        .product-card {
+            border 1px solid #e2e8f0;
+            border-radius 14px;
+            overflow hidden;
+            transition transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .product-cardhover {
+            transform translateY(-5px);
+            box-shadow 0 14px 28px -8px rgba(15, 23, 42, 0.14) !important;
+        }
+
+        .keyboard-illustration {
+            height 195px;
+            display flex;
+            align-items center;
+            justify-content center;
+            position relative;
+            overflow hidden;
+        }
+
+         Универсальные карточки и таблица 
+        .custom-card {
+            border 1px solid #e2e8f0;
+            border-radius 14px;
+            background #ffffff;
+        }
+
+        .table thead th {
+            background-color #f8fafc;
+            border-bottom 2px solid #cbd5e1;
+            font-size 0.78rem;
+            text-transform uppercase;
+            letter-spacing 0.04em;
+            color #475569;
+            vertical-align middle;
+        }
+
+        .table td {
+            vertical-align middle;
+            font-size 0.9rem;
+        }
+
+        .row-newly-added {
+            background-color #eef2ff !important;
+            transition background-color 1.5s ease;
+        }
+
+         Подвал сайта (Footer) 
+        .site-footer {
+            background-color #0f172a;
+            color #94a3b8;
+            margin-top auto;
+            border-top 1px solid #1e293b;
+        }
+
+        .site-footer a {
+            color #cbd5e1;
+            text-decoration none;
+            transition color 0.15s ease;
+        }
+
+        .site-footer ahover {
+            color #ffffff;
+        }
+    style
+head
+body
+
+    !-- ===================================================================== --
+    !-- ВЕРХНИЙ ТОП-БАР С КОНТАКТАМИ, ДОСТАВКОЙ И ИНДИКАТОРОМ АККАУНТА         --
+    !-- ===================================================================== --
+    div class=top-info-bar py-2
+        div class=container d-flex flex-wrap align-items-center justify-content-between
+            div class=d-flex flex-wrap align-items-center
+                span class=mr-3i class=fas fa-map-marker-alt text-primary mr-1i Москва, Шоурум Нижняя Сыромятническая, 10span
+                span class=mr-3 d-none d-md-inlinei class=far fa-clock text-primary mr-1i Ежедневно 1100 – 2100span
+                span class=d-none d-lg-inlinei class=fas fa-shipping-fast text-success mr-1i Доставка кастомных сборок по РФ и СНГspan
+            div
+            div class=d-flex align-items-center mt-1 mt-sm-0
+                a href=tel+74951287500 class=mr-3 font-weight-boldi class=fas fa-phone-alt mr-1i +7 (495) 128-75-00a
+                span class=badge badge-dark border border-secondary px-2 py-1 id=topbar-user-badge
+                    i class=far fa-user mr-1 text-infoi span id=topbar-user-nameГостьspan
+                span
+            div
+        div
+    div
+
+    !-- ===================================================================== --
+    !-- СКВОЗНАЯ ШАПКА САЙТА (HEADER)                                         --
+    !-- ===================================================================== --
+    header class=site-header py-3
+        div class=container
+            div class=row align-items-center
+                div class=col-md-6 d-flex align-items-center mb-3 mb-md-0
+                    a href=javascriptvoid(0) onclick=showSitePage('home') class=text-decoration-none d-flex align-items-center text-dark
+                        div class=logo-badge mr-3
+                            i class=fas fa-keyboardi
+                        div
+                        div
+                            div class=d-flex align-items-center
+                                span class=h4 font-weight-bold mb-0 mr-2KeyCraftspan
+                                span class=badge badge-pill badge-light border text-primary font-weight-boldCustom Labspan
+                            div
+                            small class=text-muted d-blockКаталог кастомных механических клавиатур и комплектующихsmall
+                        div
+                    a
+                div
+
+                div class=col-md-6
+                    div class=d-flex align-items-center justify-content-md-end
+                        div class=input-group input-group-sm mr-2 style=max-width 270px;
+                            input type=text id=header-quick-search class=form-control placeholder=Быстрый поиск сборки... oninput=syncHeaderSearch(this.value)
+                            div class=input-group-append
+                                button class=btn btn-outline-secondary type=button onclick=showSitePage('table') title=Найти в каталоге
+                                    i class=fas fa-searchi
+                                button
+                            div
+                        div
+                        button type=button onclick=showSitePage('auth') class=btn btn-sm btn-outline-primary font-weight-bold text-nowrap
+                            i class=far fa-user-circle mr-1i span id=header-user-statusЛичный кабинетspan
+                        button
+                    div
+                div
+            div
+        div
+    header
+
+    !-- ===================================================================== --
+    !-- СКВОЗНОЕ МЕНЮ НАВИГАЦИИ (NAVBAR BOOTSTRAP 4.6)                        --
+    !-- ===================================================================== --
+    nav class=navbar navbar-expand-lg navbar-dark site-navbar sticky-top
+        div class=container
+            a class=navbar-brand d-lg-none font-weight-bold href=javascriptvoid(0) onclick=showSitePage('home')
+                i class=fas fa-keyboard mr-1i KeyCraft
+            a
+            button class=navbar-toggler type=button data-toggle=collapse data-target=#keycraftNavbar aria-controls=keycraftNavbar aria-expanded=false aria-label=Меню
+                span class=navbar-toggler-iconspan
+            button
+
+            div class=collapse navbar-collapse id=keycraftNavbar
+                ul class=navbar-nav mr-auto
+                    li class=nav-item active id=nav-item-home
+                        a class=nav-link href=javascriptvoid(0) onclick=showSitePage('home')
+                            i class=fas fa-home mr-1i Главная
+                        a
+                    li
+                    li class=nav-item id=nav-item-table
+                        a class=nav-link href=javascriptvoid(0) onclick=showSitePage('table')
+                            i class=fas fa-table mr-1i Каталог и таблица
+                            span class=badge badge-light ml-1 id=nav-models-count8span
+                        a
+                    li
+                    li class=nav-item id=nav-item-add
+                        a class=nav-link href=javascriptvoid(0) onclick=showSitePage('add')
+                            i class=fas fa-plus-circle mr-1i Добавить сборку
+                        a
+                    li
+                    li class=nav-item id=nav-item-auth
+                        a class=nav-link href=javascriptvoid(0) onclick=showSitePage('auth')
+                            i class=fas fa-user-shield mr-1i Вход  Регистрация
+                        a
+                    li
+                ul
+                div class=navbar-text text-light small d-none d-xl-flex align-items-center
+                    span class=mr-3i class=fas fa-check-circle text-success mr-1i В каталоге strong id=navbar-total-label8 моделейstrongspan
+                    button type=button onclick=showSitePage('add') class=btn btn-sm btn-primary font-weight-bold shadow-sm
+                        i class=fas fa-tools mr-1i Собрать кастом
+                    button
+                div
+            div
+        div
+    nav
+
+    !-- ===================================================================== --
+    !-- ОСНОВНОЕ РАБОЧЕЕ ПРОСТРАНСТВО (4 РАЗДЕЛА САЙТА)                       --
+    !-- ===================================================================== --
+    main class=container py-4 flex-grow-1 id=main-workspace
+
+        !-- Контейнер для системных уведомлений --
+        div id=global-alert-containerdiv
+
+        !-- ================================================================= --
+        !-- РАЗДЕЛ 1 ГЛАВНАЯ СТРАНИЦА                                        --
+        !-- ================================================================= --
+        section id=page-home class=spa-page-section
+
+            !-- Герой-блок (Jumbotron) --
+            div class=jumbotron hero-jumbotron mb-5
+                div class=row align-items-center
+                    div class=col-lg-7 mb-4 mb-lg-0
+                        div class=d-inline-flex align-items-center bg-dark text-warning rounded-pill px-3 py-1 mb-3 small font-weight-bold border border-secondary
+                            i class=fas fa-bolt mr-2i СЕРИЯ CUSTOM GASKET MOUNT 2026
+                        div
+                        h1 class=font-weight-bold mb-3 style=font-size 2.35rem; line-height 1.2;
+                            Кастомные механические клавиатуры ручной сборки
+                        h1
+                        p class=lead text-white-50 mb-4 style=font-size 1.05rem;
+                            Подбирайте фрезерованные алюминиевые корпуса CNC, смазанные вручную переключатели Krytox 205g0, стабилизаторы с точной балансировкой и профильные PBT-кейкапы в едином интерактивном каталоге.
+                        p
+                        div class=d-flex flex-wrap
+                            button type=button onclick=showSitePage('table') class=btn btn-light btn-lg font-weight-bold text-primary mr-3 mb-2 shadow-sm
+                                i class=fas fa-th-list mr-2i Открыть каталог сборок
+                            button
+                            button type=button onclick=showSitePage('add') class=btn btn-outline-light btn-lg font-weight-bold mb-2
+                                i class=fas fa-plus-circle mr-2i Добавить свою конфигурацию
+                            button
+                        div
+                    div
+
+                    !-- Детализированная SVG-иллюстрация кастомной 75% клавиатуры с RGB и роллером --
+                    div class=col-lg-5 text-center
+                        div class=rgb-glow-frame
+                            svg viewBox=0 0 430 215 class=img-fluid
+                                defs
+                                    linearGradient id=rgbUnderGlow x1=0% y1=0% x2=100% y2=0%
+                                        stop offset=0% stop-color=#ec4899
+                                        stop offset=50% stop-color=#6366f1
+                                        stop offset=100% stop-color=#06b6d4
+                                    linearGradient
+                                defs
+                                !-- Корпус CNC 75% --
+                                rect x=10 y=14 width=410 height=176 rx=16 fill=#0f172a stroke=url(#rgbUnderGlow) stroke-width=3.5
+                                rect x=22 y=26 width=386 height=152 rx=10 fill=#1e293b
+
+                                !-- Ряд F1-F12 + Энкодер громкости --
+                                g
+                                    rect x=32 y=36 width=25 height=20 rx=4 fill=#ef4444
+                                    rect x=63 y=36 width=22 height=20 rx=4 fill=#334155
+                                    rect x=89 y=36 width=22 height=20 rx=4 fill=#334155
+                                    rect x=115 y=36 width=22 height=20 rx=4 fill=#334155
+                                    rect x=141 y=36 width=22 height=20 rx=4 fill=#334155
+                                    rect x=171 y=36 width=22 height=20 rx=4 fill=#4f46e5
+                                    rect x=197 y=36 width=22 height=20 rx=4 fill=#4f46e5
+                                    rect x=223 y=36 width=22 height=20 rx=4 fill=#4f46e5
+                                    rect x=249 y=36 width=22 height=20 rx=4 fill=#4f46e5
+                                    rect x=279 y=36 width=22 height=20 rx=4 fill=#334155
+                                    rect x=305 y=36 width=22 height=20 rx=4 fill=#334155
+                                    rect x=331 y=36 width=22 height=20 rx=4 fill=#334155
+                                    !-- Роллер (Knob) --
+                                    circle cx=380 cy=46 r=12 fill=#f59e0b stroke=#ffffff stroke-width=2
+                                    circle cx=380 cy=46 r=5 fill=#78350f
+                                g
+
+                                !-- Цифровой ряд --
+                                g fill=#e2e8f0
+                                    rect x=32 y=62 width=22 height=20 rx=4
+                                    rect x=58 y=62 width=22 height=20 rx=4
+                                    rect x=84 y=62 width=22 height=20 rx=4
+                                    rect x=110 y=62 width=22 height=20 rx=4
+                                    rect x=136 y=62 width=22 height=20 rx=4
+                                    rect x=162 y=62 width=22 height=20 rx=4
+                                    rect x=188 y=62 width=22 height=20 rx=4
+                                    rect x=214 y=62 width=22 height=20 rx=4
+                                    rect x=240 y=62 width=22 height=20 rx=4
+                                    rect x=266 y=62 width=22 height=20 rx=4
+                                    rect x=292 y=62 width=22 height=20 rx=4
+                                    rect x=318 y=62 width=44 height=20 rx=4 fill=#6366f1
+                                    rect x=368 y=62 width=24 height=20 rx=4 fill=#475569
+                                g
+
+                                !-- Ряд QWERTY --
+                                g fill=#e2e8f0
+                                    rect x=32 y=88 width=32 height=20 rx=4 fill=#475569
+                                    rect x=68 y=88 width=22 height=20 rx=4
+                                    rect x=94 y=88 width=22 height=20 rx=4
+                                    rect x=120 y=88 width=22 height=20 rx=4
+                                    rect x=146 y=88 width=22 height=20 rx=4
+                                    rect x=172 y=88 width=22 height=20 rx=4
+                                    rect x=198 y=88 width=22 height=20 rx=4
+                                    rect x=224 y=88 width=22 height=20 rx=4
+                                    rect x=250 y=88 width=22 height=20 rx=4
+                                    rect x=276 y=88 width=22 height=20 rx=4
+                                    rect x=302 y=88 width=60 height=20 rx=4 fill=#ec4899
+                                    rect x=368 y=88 width=24 height=20 rx=4 fill=#475569
+                                g
+
+                                !-- Нижний ряд со Spacebar и стрелками --
+                                g fill=#475569
+                                    rect x=32 y=114 width=28 height=20 rx=4
+                                    rect x=64 y=114 width=28 height=20 rx=4
+                                    rect x=96 y=114 width=28 height=20 rx=4
+                                    rect x=128 y=114 width=142 height=20 rx=4 fill=url(#rgbUnderGlow)
+                                    rect x=274 y=114 width=26 height=20 rx=4
+                                    rect x=304 y=114 width=26 height=20 rx=4 fill=#06b6d4
+                                    rect x=334 y=114 width=26 height=20 rx=4 fill=#06b6d4
+                                    rect x=364 y=114 width=28 height=20 rx=4 fill=#06b6d4
+                                g
+
+                                !-- Индикаторная RGB-полоса --
+                                rect x=130 y=146 width=170 height=4 rx=2 fill=url(#rgbUnderGlow)
+                                text x=215 y=167 text-anchor=middle fill=#cbd5e1 font-size=10.5 font-family=Inter, sans-serif font-weight=600 letter-spacing=1
+                                    KEYCRAFT Q1 PRO • 75% CNC ALUMINUM • ROTARY KNOB
+                                text
+                            svg
+                        div
+                    div
+                div
+            div
+
+            !-- Блок из 4 круглых иконок преимуществ --
+            div class=custom-card p-4 p-md-5 mb-5 shadow-sm
+                div class=row text-center
+                    div class=col-sm-6 col-lg-3 mb-4 mb-lg-0 feature-box
+                        div class=feature-icon-circle
+                            i class=fas fa-microchipi
+                        div
+                        h5 class=font-weight-bold mb-2Hot-Swap базыh5
+                        p class=text-muted small mb-0
+                            Усиленные 5-pin сокеты Kailh и Gateron позволяют менять переключатели без пайки за считанные секунды.
+                        p
+                    div
+                    div class=col-sm-6 col-lg-3 mb-4 mb-lg-0 feature-box
+                        div class=feature-icon-circle
+                            i class=fas fa-oil-cani
+                        div
+                        h5 class=font-weight-bold mb-2Смазанные свитчиh5
+                        p class=text-muted small mb-0
+                            Ручная смазка направляющих и пружин составами Krytox 205g0 и GPL 105 для глубокого акустического профиля.
+                        p
+                    div
+                    div class=col-sm-6 col-lg-3 mb-4 mb-sm-0 feature-box
+                        div class=feature-icon-circle
+                            i class=fas fa-layer-groupi
+                        div
+                        h5 class=font-weight-bold mb-2PBT Double-Shot кейкапыh5
+                        p class=text-muted small mb-0
+                            Толстостенные колпачки 1.6 мм профилей Cherry, OEM и SA, устойчивые к полировке и истиранию символов.
+                        p
+                    div
+                    div class=col-sm-6 col-lg-3 feature-box
+                        div class=feature-icon-circle
+                            i class=fas fa-shield-alti
+                        div
+                        h5 class=font-weight-bold mb-2Гарантия и кастомh5
+                        p class=text-muted small mb-0
+                            Официальная гарантия 24 месяца на электронику, настройка слоев в QMKVIA и сервисное обслуживание.
+                        p
+                    div
+                div
+            div
+
+            !-- Секция «Популярные кастомные сборки» (3 карточки с кнопками «Подробнее») --
+            div class=d-flex flex-wrap align-items-end justify-content-between mb-4
+                div
+                    span class=badge badge-primary px-3 py-1 mb-2 style=background-color#eef2ff; color#4f46e5;ВЫБОР ЭНТУЗИАСТОВspan
+                    h2 class=font-weight-bold mb-1Популярные кастомные сборкиh2
+                    p class=text-muted mb-0Готовые конфигурации с настроенными стабилизаторами и многослойной шумоизоляциейp
+                div
+                button type=button onclick=showSitePage('table') class=btn btn-outline-primary font-weight-bold mt-3 mt-md-0
+                    Смотреть все модели в таблице i class=fas fa-arrow-right ml-1i
+                button
+            div
+
+            div class=row
+                !-- Карточка 1 --
+                div class=col-md-4 mb-4
+                    div class=card product-card h-100 shadow-sm
+                        div class=keyboard-illustration style=background linear-gradient(135deg, #1e293b 0%, #334155 100%);
+                            svg viewBox=0 0 260 110 class=w-75
+                                rect x=5 y=10 width=250 height=90 rx=10 fill=#0f172a stroke=#60a5fa stroke-width=2
+                                rect x=15 y=20 width=230 height=70 rx=6 fill=#1e293b
+                                rect x=22 y=28 width=20 height=14 rx=2 fill=#ef4444
+                                rect x=46 y=28 width=160 height=14 rx=2 fill=#94a3b8
+                                circle cx=225 cy=35 r=7 fill=#38bdf8
+                                rect x=22 y=47 width=214 height=14 rx=2 fill=#cbd5e1
+                                rect x=22 y=66 width=60 height=14 rx=2 fill=#475569
+                                rect x=86 y=66 width=90 height=14 rx=2 fill=#3b82f6
+                                rect x=180 y=66 width=56 height=14 rx=2 fill=#475569
+                            svg
+                            span class=badge badge-info position-absolute style=top 12px; right 12px;75% Gasketspan
+                        div
+                        div class=card-body d-flex flex-column
+                            div class=d-flex justify-content-between align-items-start mb-2
+                                h5 class=card-title font-weight-bold mb-0Keychron Q1 Pro Wirelessh5
+                                span class=text-primary font-weight-bold text-nowrap ml-219 900 ₽span
+                            div
+                            p class=card-text text-muted small flex-grow-1
+                                Цельнометаллический корпус из алюминия 6063, беспроводной модуль Bluetooth 5.1, тактильные свитчи Gateron Jupiter Banana и поддержка QMKVIA.
+                            p
+                            div class=mb-3
+                                span class=badge badge-light border mr-1Hot-Swapspan
+                                span class=badge badge-light border mr-1Алюминий CNCspan
+                                span class=badge badge-light borderТактильныеspan
+                            div
+                            button type=button class=btn btn-primary btn-block font-weight-bold onclick=openProductModal('Keychron Q1 Pro Wireless', 'KC-001', '75% (81 клавиша)', 'Тактильные (Gateron Jupiter Banana)', 'Анодированный алюминий CNC', 'Hot-Swap, RGB, Шумоизоляция, Беспроводной режим', '19 900 ₽', 'Флагманская кастомная клавиатура с двойным Gasket Mount креплением, поликарбонатной плитой и программируемым металлическим энкодером.')
+                                i class=fas fa-info-circle mr-1i Подробнее
+                            button
+                        div
+                    div
+                div
+
+                !-- Карточка 2 --
+                div class=col-md-4 mb-4
+                    div class=card product-card h-100 shadow-sm
+                        div class=keyboard-illustration style=background linear-gradient(135deg, #312e81 0%, #4f46e5 100%);
+                            svg viewBox=0 0 260 110 class=w-75
+                                rect x=5 y=10 width=250 height=90 rx=10 fill=#1e1b4b stroke=#c084fc stroke-width=2
+                                rect x=15 y=20 width=230 height=70 rx=6 fill=#312e81
+                                rect x=22 y=28 width=20 height=14 rx=2 fill=#f59e0b
+                                rect x=46 y=28 width=160 height=14 rx=2 fill=#e0e7ff
+                                circle cx=225 cy=35 r=7 fill=#f59e0b
+                                rect x=22 y=47 width=214 height=14 rx=2 fill=#c7d2fe
+                                rect x=22 y=66 width=60 height=14 rx=2 fill=#6366f1
+                                rect x=86 y=66 width=90 height=14 rx=2 fill=#f59e0b
+                                rect x=180 y=66 width=56 height=14 rx=2 fill=#6366f1
+                            svg
+                            span class=badge badge-warning text-dark position-absolute style=top 12px; right 12px;Хит продажspan
+                        div
+                        div class=card-body d-flex flex-column
+                            div class=d-flex justify-content-between align-items-start mb-2
+                                h5 class=card-title font-weight-bold mb-0MonsGeek M1W V3 Aluh5
+                                span class=text-primary font-weight-bold text-nowrap ml-213 490 ₽span
+                            div
+                            p class=card-text text-muted small flex-grow-1
+                                Форм-фактор 75% с боковыми латунными акцентами, трехрежимным подключением 2.4 ГГц и смазанными линейными свитчами Akko V3 Cream Yellow Pro.
+                            p
+                            div class=mb-3
+                                span class=badge badge-light border mr-15-pin Hot-Swapspan
+                                span class=badge badge-light border mr-1RGB Southspan
+                                span class=badge badge-light borderЛинейныеspan
+                            div
+                            button type=button class=btn btn-primary btn-block font-weight-bold onclick=openProductModal('MonsGeek M1W V3 Aluminum', 'KC-002', '75% (81 клавиша)', 'Линейные (Akko V3 Cream Yellow Pro)', 'Алюминий CNC', 'Hot-Swap, RGB, Беспроводной режим, Смазка стабов', '13 490 ₽', 'Сбалансированная кастомная база с аккумулятором 6000 мАч, южным расположением светодиодов и комплектной шумоизоляцией Poron.')
+                                i class=fas fa-info-circle mr-1i Подробнее
+                            button
+                        div
+                    div
+                div
+
+                !-- Карточка 3 --
+                div class=col-md-4 mb-4
+                    div class=card product-card h-100 shadow-sm
+                        div class=keyboard-illustration style=background linear-gradient(135deg, #064e3b 0%, #0d9488 100%);
+                            svg viewBox=0 0 260 110 class=w-75
+                                rect x=15 y=14 width=230 height=82 rx=10 fill=#042f2e stroke=#34d399 stroke-width=2
+                                rect x=23 y=22 width=214 height=66 rx=6 fill=#115e59
+                                rect x=30 y=29 width=22 height=14 rx=2 fill=#10b981
+                                rect x=56 y=29 width=174 height=14 rx=2 fill=#ccfbf1
+                                rect x=30 y=48 width=200 height=14 rx=2 fill=#99f6e4
+                                rect x=30 y=66 width=52 height=14 rx=2 fill=#0f766e
+                                rect x=86 y=66 width=88 height=14 rx=2 fill=#34d399
+                                rect x=178 y=66 width=52 height=14 rx=2 fill=#0f766e
+                            svg
+                            span class=badge badge-success position-absolute style=top 12px; right 12px;TKL 80% Classicspan
+                        div
+                        div class=card-body d-flex flex-column
+                            div class=d-flex justify-content-between align-items-start mb-2
+                                h5 class=card-title font-weight-bold mb-0QK80 Custom TKL Kith5
+                                span class=text-primary font-weight-bold text-nowrap ml-222 400 ₽span
+                            div
+                            p class=card-text text-muted small flex-grow-1
+                                Премиальная TKL-платформа с зеркальным PVD-грузом из нержавеющей стали, свитчами Gateron Oil King и винтовыми стабилизаторами Owlab.
+                            p
+                            div class=mb-3
+                                span class=badge badge-light border mr-1PVD Weightspan
+                                span class=badge badge-light border mr-1Gasket Mountspan
+                                span class=badge badge-light borderЛинейныеspan
+                            div
+                            button type=button class=btn btn-primary btn-block font-weight-bold onclick=openProductModal('QK80 Custom TKL Kit', 'KC-006', 'TKL 80% (87 клавиш)', 'Линейные (Gateron Oil King Lubed)', 'Анодированный алюминий + стальной груз', 'Hot-Swap, Шумоизоляция, Беспроводной режим, Смазка стабов', '22 400 ₽', 'Эталонная TKL-сборка с гибкой FR4-плитой, кастомными демпферами и фирменными стабилизаторами Owlab V3.')
+                                i class=fas fa-info-circle mr-1i Подробнее
+                            button
+                        div
+                    div
+                div
+            div
+        section
+
+        !-- ================================================================= --
+        !-- РАЗДЕЛ 2 КАТАЛОГ И ТАБЛИЦА СБОРОК                                --
+        !-- ================================================================= --
+        section id=page-table class=spa-page-section style=display none;
+
+            !-- Заголовок, счетчик и кнопка добавления --
+            div class=d-flex flex-wrap align-items-center justify-content-between mb-4
+                div
+                    nav aria-label=breadcrumb
+                        ol class=breadcrumb bg-transparent p-0 mb-1 small
+                            li class=breadcrumb-itema href=javascriptvoid(0) onclick=showSitePage('home')Главнаяali
+                            li class=breadcrumb-item active aria-current=pageКаталог и таблица сборокli
+                        ol
+                    nav
+                    div class=d-flex align-items-center flex-wrap
+                        h2 class=font-weight-bold mb-0 mr-3Каталог кастомных клавиатурh2
+                        span class=badge badge-primary px-2 py-1 id=catalog-header-badgeВсего позиций 8span
+                    div
+                    p class=text-muted small mb-0 mt-1Полная техническая таблица готовых сборок и баз с фильтрацией по параметрамp
+                div
+                div class=mt-3 mt-sm-0
+                    button type=button onclick=showSitePage('add') class=btn btn-primary font-weight-bold shadow-sm
+                        i class=fas fa-plus mr-1i + Добавить сборку
+                    button
+                div
+            div
+
+            !-- Панель живого поиска и фильтрации --
+            div class=custom-card p-3 p-md-4 mb-4 shadow-sm
+                div class=form-row align-items-end
+                    div class=col-md-4 mb-2 mb-md-0
+                        label class=small font-weight-bold text-secondary mb-1Поиск по модели, артикулу или опциямlabel
+                        div class=input-group
+                            div class=input-group-prepend
+                                span class=input-group-text bg-lighti class=fas fa-search text-mutedispan
+                            div
+                            input type=text id=table-search-input class=form-control placeholder=Например Keychron, Rainy75, Oil King... oninput=handleFilterChange()
+                        div
+                    div
+                    div class=col-md-3 mb-2 mb-md-0
+                        label class=small font-weight-bold text-secondary mb-1Форм-факторlabel
+                        select id=table-filter-factor class=custom-select onchange=handleFilterChange()
+                            option value=ALLВсе форматыoption
+                            option value=60%60% (Ультракомпакт)option
+                            option value=65%65% (Компактная со стрелками)option
+                            option value=75%75% (С рядом F1–F12)option
+                            option value=TKL 80%TKL 80% (Без цифрового блока)option
+                            option value=100%100% (Полноразмерная)option
+                        select
+                    div
+                    div class=col-md-3 mb-2 mb-md-0
+                        label class=small font-weight-bold text-secondary mb-1Тип свитчейlabel
+                        select id=table-filter-switch class=custom-select onchange=handleFilterChange()
+                            option value=ALLВсе типы свитчейoption
+                            option value=ЛинейныеЛинейные (Linear)option
+                            option value=ТактильныеТактильные (Tactile)option
+                            option value=КликающиеКликающие (Clicky)option
+                        select
+                    div
+                    div class=col-md-2
+                        button type=button onclick=resetTableFilters() class=btn btn-outline-secondary btn-block
+                            i class=fas fa-undo-alt mr-1i Сбросить
+                        button
+                    div
+                div
+            div
+
+            !-- Таблица сборок (.table.table-hover.table-striped.table-bordered) --
+            div class=custom-card shadow-sm overflow-hidden
+                div class=table-responsive
+                    table class=table table-hover table-striped table-bordered mb-0
+                        thead
+                            tr
+                                th class=text-center style=width 85px;IDth
+                                thМодельth
+                                thФорм-факторth
+                                thТип переключателейth
+                                thМатериал корпусаth
+                                thОпцииth
+                                th class=text-rightЦена (₽)th
+                                th class=text-centerСтатус наличияth
+                                th class=text-center style=width 110px;Действияth
+                            tr
+                        thead
+                        tbody id=bootstrap-table-body
+                            !-- Динамически заполняется скриптом --
+                        tbody
+                    table
+                div
+
+                !-- Рабочая пагинация и счетчик показанных моделей --
+                div class=p-3 bg-light border-top d-flex flex-wrap align-items-center justify-content-between
+                    div class=small text-muted mb-2 mb-sm-0
+                        Показано strong id=table-shown-count0strong из strong id=table-total-count0strong моделей (страница span id=table-current-page-label1span)
+                    div
+                    nav aria-label=Навигация по страницам таблицы
+                        ul class=pagination pagination-sm mb-0 id=table-pagination
+                            !-- Генерируется динамически --
+                        ul
+                    nav
+                div
+            div
+        section
+
+        !-- ================================================================= --
+        !-- РАЗДЕЛ 3 ФОРМА ДОБАВЛЕНИЯ НОВОЙ СБОРКИ В ТАБЛИЦУ                 --
+        !-- ================================================================= --
+        section id=page-add class=spa-page-section style=display none;
+            div class=row justify-content-center
+                div class=col-lg-9
+                    div class=d-flex flex-wrap align-items-center justify-content-between mb-3
+                        div
+                            nav aria-label=breadcrumb
+                                ol class=breadcrumb bg-transparent p-0 mb-1 small
+                                    li class=breadcrumb-itema href=javascriptvoid(0) onclick=showSitePage('home')Главнаяali
+                                    li class=breadcrumb-itema href=javascriptvoid(0) onclick=showSitePage('table')Каталог и таблицаali
+                                    li class=breadcrumb-item active aria-current=pageДобавить сборкуli
+                                ol
+                            nav
+                            h2 class=font-weight-bold mb-1Добавление кастомной сборки в каталогh2
+                            p class=text-muted small mb-0Укажите конфигурацию клавиатуры для публикации в общем табличном реестре KeyCraftp
+                        div
+                        button type=button onclick=showSitePage('table') class=btn btn-outline-secondary btn-sm mt-2 mt-sm-0
+                            i class=fas fa-arrow-left mr-1i Вернуться к таблице
+                        button
+                    div
+
+                    div class=custom-card p-4 p-md-5 shadow-sm
+                        form id=add-keyboard-form onsubmit=handleBootstrapAddSubmit(event)
+
+                            !-- Ряд 1 Название модели и АртикулКод --
+                            div class=form-row
+                                div class=form-group col-md-8
+                                    label for=add-name class=font-weight-bold smallНазвание модели span class=text-dangerspanlabel
+                                    input type=text class=form-control id=add-name value=Rainy75 Electro White Pro placeholder=Например Rainy75 Electro White Pro required
+                                    small class=form-text text-mutedПолное наименование кастомной базы или готового комплекта.small
+                                div
+                                div class=form-group col-md-4
+                                    label for=add-sku class=font-weight-bold smallАртикул  Код сборки span class=text-dangerspanlabel
+                                    input type=text class=form-control id=add-sku value=KC-009 placeholder=Например KC-009 required
+                                div
+                            div
+
+                            !-- Ряд 2 Форм-фактор, Материал корпуса и Стоимость --
+                            div class=form-row
+                                div class=form-group col-md-4
+                                    label for=add-factor class=font-weight-bold smallФорм-фактор span class=text-dangerspanlabel
+                                    select class=custom-select id=add-factor required
+                                        option value=60%60% (Ультракомпакт, 61 кл.)option
+                                        option value=65%65% (Компактная, 67 кл.)option
+                                        option value=75% selected75% (Компактная с F-рядом, 81 кл.)option
+                                        option value=TKL 80%TKL 80% (Классика без NumPad)option
+                                        option value=100%100% (Полноразмерная, 104 кл.)option
+                                    select
+                                div
+                                div class=form-group col-md-5
+                                    label for=add-case class=font-weight-bold smallМатериал корпуса span class=text-dangerspanlabel
+                                    select class=custom-select id=add-case required
+                                        option value=Алюминий CNC 6063 selectedАлюминий CNC 6063 (Анодирование)option
+                                        option value=Литой поликарбонат (Frosted PC)Литой поликарбонат (Frosted PC)option
+                                        option value=Алюминий + Латунный грузАлюминий + Латунный груз PVDoption
+                                        option value=Многослойный акрил + ABSМногослойный акрил + ABSoption
+                                    select
+                                div
+                                div class=form-group col-md-3
+                                    label for=add-price class=font-weight-bold smallСтоимость (₽) span class=text-dangerspanlabel
+                                    input type=number class=form-control id=add-price value=15900 min=1500 max=350000 step=100 required
+                                div
+                            div
+
+                            !-- Ряд 3 Тип переключателей и конкретная модель свитчей --
+                            div class=form-row align-items-center mb-2
+                                div class=form-group col-md-7 mb-2
+                                    label class=font-weight-bold small d-block mb-2Тип переключателей (Radio Buttons) span class=text-dangerspanlabel
+                                    div class=custom-control custom-radio custom-control-inline
+                                        input type=radio id=radioLinear name=addSwitchType class=custom-control-input value=Линейные checked
+                                        label class=custom-control-label small font-weight-medium for=radioLinearЛинейныеlabel
+                                    div
+                                    div class=custom-control custom-radio custom-control-inline
+                                        input type=radio id=radioTactile name=addSwitchType class=custom-control-input value=Тактильные
+                                        label class=custom-control-label small font-weight-medium for=radioTactileТактильныеlabel
+                                    div
+                                    div class=custom-control custom-radio custom-control-inline
+                                        input type=radio id=radioClicky name=addSwitchType class=custom-control-input value=Кликающие
+                                        label class=custom-control-label small font-weight-medium for=radioClickyКликающиеlabel
+                                    div
+                                div
+                                div class=form-group col-md-5 mb-2
+                                    label for=add-switch-model class=font-weight-bold smallМодель установленных свитчейlabel
+                                    input type=text class=form-control form-control-sm id=add-switch-model value=HMX Violet Linear (45g) placeholder=Например Gateron Oil King
+                                div
+                            div
+
+                            !-- Ряд 4 Дополнительные опции (.custom-control.custom-checkbox) --
+                            div class=form-group
+                                label class=font-weight-bold small d-block mb-2Дополнительные опции сборкиlabel
+                                div class=row
+                                    div class=col-sm-6 col-md-4 mb-2
+                                        div class=custom-control custom-checkbox
+                                            input type=checkbox class=custom-control-input add-opt-check id=chkHotswap value=Hot-Swap checked
+                                            label class=custom-control-label small for=chkHotswapHot-Swap сокеты 5-pinlabel
+                                        div
+                                    div
+                                    div class=col-sm-6 col-md-4 mb-2
+                                        div class=custom-control custom-checkbox
+                                            input type=checkbox class=custom-control-input add-opt-check id=chkRgb value=RGB checked
+                                            label class=custom-control-label small for=chkRgbRGB-подсветка (South-facing)label
+                                        div
+                                    div
+                                    div class=col-sm-6 col-md-4 mb-2
+                                        div class=custom-control custom-checkbox
+                                            input type=checkbox class=custom-control-input add-opt-check id=chkFoam value=Шумоизоляция checked
+                                            label class=custom-control-label small for=chkFoamШумоизоляция Poron + IXPElabel
+                                        div
+                                    div
+                                    div class=col-sm-6 col-md-4 mb-2
+                                        div class=custom-control custom-checkbox
+                                            input type=checkbox class=custom-control-input add-opt-check id=chkWireless value=Беспроводной режим checked
+                                            label class=custom-control-label small for=chkWirelessБеспроводной режим (2.4G  BT)label
+                                        div
+                                    div
+                                    div class=col-sm-6 col-md-4 mb-2
+                                        div class=custom-control custom-checkbox
+                                            input type=checkbox class=custom-control-input add-opt-check id=chkStabs value=Смазка стабов checked
+                                            label class=custom-control-label small for=chkStabsРучная смазка стабовlabel
+                                        div
+                                    div
+                                div
+                            div
+
+                            !-- Ряд 5 Загрузка фоторендера и Описание сборки --
+                            div class=form-row
+                                div class=form-group col-md-5
+                                    label class=font-weight-bold smallФото или 3D-рендер сборкиlabel
+                                    div class=custom-file
+                                        input type=file class=custom-file-input id=customFileImage accept=image onchange=updateFileLabel(this)
+                                        label class=custom-file-label text-truncate for=customFileImage id=customFileLabelВыберите изображение...label
+                                    div
+                                    small class=form-text text-mutedФорматы JPG, PNG, WebP (до 10 МБ).small
+                                div
+                                div class=form-group col-md-7
+                                    label for=add-desc class=font-weight-bold smallОписание сборки и акустического профиляlabel
+                                    textarea class=form-control id=add-desc rows=3 placeholder=Опишите плиту позиционирования, профиль кейкапов и особенности звучания...Крепление Gasket Mount на силиконовых демпферах, полипропиленовая (PP) плита, 5 слоев шумоизоляции, выраженный кремовый (creamythocky) профиль звучания.textarea
+                                div
+                            div
+
+                            hr class=my-4
+
+                            !-- Кнопки отправки --
+                            div class=d-flex flex-wrap align-items-center justify-content-between
+                                span class=small text-muted mb-2 mb-sm-0
+                                    i class=fas fa-check-circle text-success mr-1i Сборка сразу станет доступна в общем каталоге
+                                span
+                                div
+                                    button type=reset class=btn btn-outline-secondary mr-2 onclick=resetFileLabel()
+                                        Очистить поля
+                                    button
+                                    button type=submit class=btn btn-primary font-weight-bold px-4 shadow-sm
+                                        i class=fas fa-plus-circle mr-1i Опубликовать сборку в каталоге
+                                    button
+                                div
+                            div
+
+                        form
+                    div
+                div
+            div
+        section
+
+        !-- ================================================================= --
+        !-- РАЗДЕЛ 4 АВТОРИЗАЦИЯ И РЕГИСТРАЦИЯ                               --
+        !-- ================================================================= --
+        section id=page-auth class=spa-page-section style=display none;
+
+            div class=text-center mb-4
+                span class=badge badge-primary px-3 py-1 mb-2 style=background-color#eef2ff; color#4f46e5;КЛУБ KEYCRAFTspan
+                h2 class=font-weight-boldЛичный кабинет участникаh2
+                p class=text-muted small mx-auto style=max-width 640px;
+                    Авторизуйтесь для сохранения собственных конфигураций, участия в групповых закупках (Group Buy) и управления каталогом сборок.
+                p
+            div
+
+            div class=row
+                !-- Левая колонка (.col-lg-5) Вход в личный кабинет --
+                div class=col-lg-5 mb-4
+                    div class=custom-card p-4 p-md-5 h-100 shadow-sm
+                        div class=d-flex align-items-center pb-3 mb-4 border-bottom
+                            div class=rounded-circle bg-primary text-white d-flex align-items-center justify-content-center mr-3 style=width 44px; height 44px;
+                                i class=fas fa-keyi
+                            div
+                            div
+                                h4 class=font-weight-bold mb-0Вход в аккаунтh4
+                                small class=text-mutedДля зарегистрированных участников клубаsmall
+                            div
+                        div
+
+                        form onsubmit=handleLoginSubmit(event)
+                            div class=form-group
+                                label for=login-email class=font-weight-bold smallEmail или Никнейм span class=text-dangerspanlabel
+                                div class=input-group
+                                    div class=input-group-prepend
+                                        span class=input-group-text bg-lighti class=far fa-envelope text-mutedispan
+                                    div
+                                    input type=text class=form-control id=login-email value=alex@keycraft.ru placeholder=name@example.com required
+                                div
+                            div
+
+                            div class=form-group
+                                label for=login-password class=font-weight-bold smallПароль span class=text-dangerspanlabel
+                                div class=input-group
+                                    div class=input-group-prepend
+                                        span class=input-group-text bg-lighti class=fas fa-lock text-mutedispan
+                                    div
+                                    input type=password class=form-control id=login-password value=KeyCraft2026 required
+                                div
+                            div
+
+                            div class=d-flex align-items-center justify-content-between mb-4
+                                div class=custom-control custom-checkbox
+                                    input type=checkbox class=custom-control-input id=rememberMeCheck checked
+                                    label class=custom-control-label small for=rememberMeCheckЗапомнить меняlabel
+                                div
+                                a href=javascriptvoid(0) onclick=showToastAlert('Инструкция по сбросу пароля отправлена на вашу электронную почту.', 'info') class=smallЗабыли парольa
+                            div
+
+                            button type=submit class=btn btn-primary btn-block font-weight-bold py-2 shadow-sm
+                                i class=fas fa-sign-in-alt mr-1i Войти в личный кабинет
+                            button
+                        form
+
+                        div class=mt-4 pt-3 border-top small text-muted
+                            div class=d-flex align-items-center
+                                i class=fas fa-shield-alt text-success mr-2i
+                                spanБезопасная авторизация с двухфакторной защитой профиля.span
+                            div
+                        div
+                    div
+                div
+
+                !-- Правая колонка (.col-lg-7) Регистрация нового участника --
+                div class=col-lg-7 mb-4
+                    div class=custom-card p-4 p-md-5 h-100 shadow-sm
+                        div class=d-flex align-items-center pb-3 mb-4 border-bottom
+                            div class=rounded-circle bg-success text-white d-flex align-items-center justify-content-center mr-3 style=width 44px; height 44px;
+                                i class=fas fa-user-plusi
+                            div
+                            div
+                                h4 class=font-weight-bold mb-0Регистрация в KeyCrafth4
+                                small class=text-mutedСоздайте профиль для публикации сборок и отслеживания заказовsmall
+                            div
+                        div
+
+                        form onsubmit=handleRegisterSubmit(event)
+                            div class=form-row
+                                div class=form-group col-md-6
+                                    label for=reg-name class=font-weight-bold smallИмя и Фамилия span class=text-dangerspanlabel
+                                    input type=text class=form-control id=reg-name placeholder=Алексей Смирнов required
+                                div
+                                div class=form-group col-md-6
+                                    label for=reg-nickname class=font-weight-bold smallНикнейм в сообществе span class=text-dangerspanlabel
+                                    input type=text class=form-control id=reg-nickname placeholder=Alex_CustomKeys required
+                                div
+                            div
+
+                            div class=form-row
+                                div class=form-group col-md-7
+                                    label for=reg-email class=font-weight-bold smallЭлектронная почта (Email) span class=text-dangerspanlabel
+                                    input type=email class=form-control id=reg-email placeholder=alex.keys@example.com required
+                                div
+                                div class=form-group col-md-5
+                                    label for=reg-role class=font-weight-bold smallЛюбимый форм-факторlabel
+                                    select class=custom-select id=reg-role
+                                        option value=75% Gasket Mount selected75% Компактные сборкиoption
+                                        option value=65% Ultra Compact65% Ультракомпактoption
+                                        option value=TKL 80% ClassicTKL 80% Классикаoption
+                                        option value=60% HHKB  Mini60% Мини-форматoption
+                                    select
+                                div
+                            div
+
+                            div class=form-row
+                                div class=form-group col-md-6
+                                    label for=reg-pass class=font-weight-bold smallПароль (не менее 6 символов) span class=text-dangerspanlabel
+                                    input type=password class=form-control id=reg-pass minlength=6 placeholder=•••••••• required
+                                div
+                                div class=form-group col-md-6
+                                    label for=reg-pass-confirm class=font-weight-bold smallПодтверждение пароля span class=text-dangerspanlabel
+                                    input type=password class=form-control id=reg-pass-confirm minlength=6 placeholder=•••••••• required
+                                div
+                            div
+
+                            div class=form-group
+                                div class=custom-control custom-checkbox
+                                    input type=checkbox class=custom-control-input id=regTermsCheck checked required
+                                    label class=custom-control-label small for=regTermsCheck
+                                        Я принимаю пользовательское соглашение сообщества KeyCraft и даю согласие на обработку персональных данных
+                                    label
+                                div
+                            div
+
+                            button type=submit class=btn btn-success btn-block font-weight-bold py-2 shadow-sm
+                                i class=fas fa-user-check mr-1i Создать аккаунт
+                            button
+                        form
+                    div
+                div
+            div
+        section
+
+    main
+
+    !-- ===================================================================== --
+    !-- СКВОЗНОЙ ПОДВАЛ САЙТА (FOOTER)                                        --
+    !-- ===================================================================== --
+    footer class=site-footer pt-5 pb-4 mt-5
+        div class=container
+            div class=row
+                !-- О компании --
+                div class=col-lg-4 mb-4
+                    div class=d-flex align-items-center text-white font-weight-bold h5 mb-3
+                        div class=logo-badge mr-2 style=width 34px; height 34px; font-size 0.95rem;
+                            i class=fas fa-keyboardi
+                        div
+                        spanKeyCraft Custom Keyboardsspan
+                    div
+                    p class=small mb-3
+                        Специализированный каталог и кастом-мастерская механических клавиатур. Собираем, смазываем и настраиваем клавиатуры под индивидуальные задачи разработчиков, геймеров и авторов.
+                    p
+                    div class=small text-light
+                        div class=mb-1i class=fas fa-map-marker-alt text-primary mr-2i г. Москва, ул. Нижняя Сыромятническая, 10 (Artplay)div
+                        divi class=fas fa-phone-alt text-primary mr-2i +7 (495) 128-75-00 • support@keycraft.rudiv
+                    div
+                div
+
+                !-- Навигация по разделам --
+                div class=col-sm-6 col-lg-3 mb-4
+                    h6 class=text-white font-weight-bold text-uppercase small mb-3 style=letter-spacing 0.05em;Разделы сайтаh6
+                    ul class=list-unstyled small mb-0
+                        li class=mb-2a href=javascriptvoid(0) onclick=showSitePage('home')i class=fas fa-angle-right mr-1 text-primaryi Главная страницаali
+                        li class=mb-2a href=javascriptvoid(0) onclick=showSitePage('table')i class=fas fa-angle-right mr-1 text-primaryi Каталог и таблица сборокali
+                        li class=mb-2a href=javascriptvoid(0) onclick=showSitePage('add')i class=fas fa-angle-right mr-1 text-primaryi Добавить сборку в реестрali
+                        lia href=javascriptvoid(0) onclick=showSitePage('auth')i class=fas fa-angle-right mr-1 text-primaryi Вход и регистрацияali
+                    ul
+                div
+
+                !-- Подписка на Group Buy --
+                div class=col-sm-6 col-lg-5 mb-4
+                    h6 class=text-white font-weight-bold text-uppercase small mb-3 style=letter-spacing 0.05em;Подписка на анонсы Group Buyh6
+                    p class=small mb-3
+                        Получайте уведомления о старте предзаказов на лимитированные алюминиевые базы, редкие свитчи и дизайнерские наборы кейкапов GMK  PBTfans.
+                    p
+                    form onsubmit=handleNewsletterSubmit(event)
+                        div class=input-group input-group-sm
+                            input type=email id=footer-newsletter-email class=form-control placeholder=Ваш Email для анонсов... required
+                            div class=input-group-append
+                                button class=btn btn-primary font-weight-bold px-3 type=submitПодписатьсяbutton
+                            div
+                        div
+                    form
+                div
+            div
+
+            hr class=border-secondary my-3
+
+            div class=d-flex flex-wrap align-items-center justify-content-between small
+                span© 2026 KeyCraft Custom Lab. Все права защищены.span
+                div
+                    a href=javascriptvoid(0) onclick=showSitePage('home') class=mr-3Главнаяa
+                    a href=javascriptvoid(0) onclick=showSitePage('table') class=mr-3Каталогa
+                    a href=javascriptvoid(0) onclick=showSitePage('add') class=mr-3Конструкторa
+                    a href=javascriptvoid(0) onclick=showSitePage('auth')Профильa
+                div
+            div
+        div
+    footer
+
+    !-- ===================================================================== --
+    !-- МОДАЛЬНОЕ ОКНО ПОЛНОЙ СПЕЦИФИКАЦИИ МОДЕЛИ                             --
+    !-- ===================================================================== --
+    div class=modal fade id=productDetailModal tabindex=-1 role=dialog aria-labelledby=productDetailModalTitle aria-hidden=true
+        div class=modal-dialog modal-dialog-centered role=document
+            div class=modal-content border-0 shadow-lg style=border-radius 14px;
+                div class=modal-header bg-light
+                    div
+                        span class=badge badge-primary mb-1 id=modal-model-idKC-001span
+                        h5 class=modal-title font-weight-bold id=productDetailModalTitleСпецификация моделиh5
+                    div
+                    button type=button class=close data-dismiss=modal aria-label=Закрыть
+                        span aria-hidden=true&times;span
+                    button
+                div
+                div class=modal-body
+                    p id=modal-model-desc class=text-muted small mb-3p
+                    ul class=list-group list-group-flush small
+                        li class=list-group-item d-flex justify-content-between px-0
+                            span class=text-secondaryФорм-факторspan
+                            strong id=modal-model-factorstrong
+                        li
+                        li class=list-group-item d-flex justify-content-between px-0
+                            span class=text-secondaryТип переключателейspan
+                            strong id=modal-model-switchesstrong
+                        li
+                        li class=list-group-item d-flex justify-content-between px-0
+                            span class=text-secondaryМатериал корпусаspan
+                            strong id=modal-model-casestrong
+                        li
+                        li class=list-group-item d-flex justify-content-between px-0
+                            span class=text-secondaryУстановленные опцииspan
+                            strong id=modal-model-options class=text-right style=max-width 60%;strong
+                        li
+                        li class=list-group-item d-flex justify-content-between px-0
+                            span class=text-secondaryСтоимость сборкиspan
+                            strong id=modal-model-price class=text-primary h6 mb-0 font-weight-boldstrong
+                        li
+                    ul
+                div
+                div class=modal-footer bg-light
+                    button type=button class=btn btn-outline-secondary btn-sm data-dismiss=modalЗакрытьbutton
+                    button type=button class=btn btn-primary btn-sm font-weight-bold data-dismiss=modal onclick=showSitePage('table')
+                        i class=fas fa-table mr-1i Перейти к таблице каталога
+                    button
+                div
+            div
+        div
+    div
+
+    !-- Bootstrap 4.6.2 JS (jQuery Slim + Popper + Bootstrap) --
+    script src=httpscdn.jsdelivr.netnpmjquery@3.5.1distjquery.slim.min.jsscript
+    script src=httpscdn.jsdelivr.netnpmpopper.js@1.16.1distumdpopper.min.jsscript
+    script src=httpscdn.jsdelivr.netnpmbootstrap@4.6.2distjsbootstrap.min.jsscript
+
+    script
+         База кастомных клавиатур каталога
+        const keyboardCatalog = [
+            {
+                id KC-001,
+                name Keychron Q1 Pro Wireless,
+                factor 75%,
+                switchType Тактильные,
+                switchModel Gateron Jupiter Banana,
+                caseMaterial Алюминий CNC 6063,
+                options Hot-Swap, RGB, Шумоизоляция, Беспроводной режим,
+                price 19900,
+                status В наличии,
+                desc Флагманская кастомная клавиатура 75% с двойным Gasket Mount, поликарбонатной плитой и металлическим энкодером громкости.
+            },
+            {
+                id KC-002,
+                name MonsGeek M1W V3 Aluminum,
+                factor 75%,
+                switchType Линейные,
+                switchModel Akko V3 Cream Yellow Pro,
+                caseMaterial Алюминий CNC 6063,
+                options Hot-Swap, RGB, Беспроводной режим, Смазка стабов,
+                price 13490,
+                status Хит продаж,
+                desc Популярная кастомная база с боковыми золотистыми вставками, аккумулятором 6000 мАч и полной шумоизоляцией Poron.
+            },
+            {
+                id KC-003,
+                name Zoom65 Essential Edition V2,
+                factor 65%,
+                switchType Линейные,
+                switchModel JWK Black Linear (Lubed),
+                caseMaterial Алюминий + Латунный груз,
+                options Hot-Swap, Шумоизоляция, Беспроводной режим, Смазка стабов,
+                price 21500,
+                status В наличии,
+                desc Компактная 65% сборка с телескопическим роллером громкости и зеркальным PVD-грузом на нижней крышке.
+            },
+            {
+                id KC-004,
+                name Leobog Hi75 Custom Kit,
+                factor 75%,
+                switchType Линейные,
+                switchModel Leobog Nimbus V3,
+                caseMaterial Алюминий CNC 6063,
+                options Hot-Swap, RGB, Шумоизоляция,
+                price 9800,
+                status В наличии,
+                desc Доступная кастомная клавиатура в литом алюминиевом корпусе с флекс-пропилами в текстолите и сочным звучанием.
+            },
+            {
+                id KC-005,
+                name Varmilo Minilo98 Pro Full,
+                factor 100%,
+                switchType Тактильные,
+                switchModel Kailh Prestige Tactile,
+                caseMaterial Многослойный акрил + ABS,
+                options Hot-Swap, Беспроводной режим, Шумоизоляция,
+                price 17500,
+                status В наличии,
+                desc Полноразмерная клавиатура с цифровым блоком, трехслойным демпфированием и фирменными PBT кейкапами.
+            },
+            {
+                id KC-006,
+                name QK80 Custom TKL Kit,
+                factor TKL 80%,
+                switchType Линейные,
+                switchModel Gateron Oil King,
+                caseMaterial Алюминий + Латунный груз,
+                options Hot-Swap, Шумоизоляция, Беспроводной режим, Смазка стабов,
+                price 22400,
+                status В наличии,
+                desc Классический TKL-формат 80% без цифрового блока, ориентированный на максимальный акустический комфорт.
+            },
+            {
+                id KC-007,
+                name Tofu60 Redux Anodized,
+                factor 60%,
+                switchType Кликающие,
+                switchModel Kailh Box Jade Clicky,
+                caseMaterial Алюминий CNC 6063,
+                options Hot-Swap, RGB, Смазка стабов,
+                price 16800,
+                status Под заказ,
+                desc Минималистичный 60% корпус с четкими гранями, латунным внутренним утяжелителем и выраженным тактильным кликом.
+            },
+            {
+                id KC-008,
+                name Neo65 Frosted Polycarbonate,
+                factor 65%,
+                switchType Тактильные,
+                switchModel Boba U4T (62g),
+                caseMaterial Литой поликарбонат (Frosted PC),
+                options Hot-Swap, RGB, Шумоизоляция, Смазка стабов,
+                price 18200,
+                status В наличии,
+                desc Полупрозрачный матовый корпус из поликарбоната с мягким креплением O-Ring и глубокими тактильными переключателями.
+            }
+        ];
+
+        let currentPage = 1;
+        const itemsPerPage = 5;
+        let lastAddedId = null;
+
+         Переключение разделов сайта (SPA)
+        function showSitePage(pageKey) {
+            const pages = ['home', 'table', 'add', 'auth'];
+            pages.forEach(k = {
+                const sec = document.getElementById(`page-${k}`);
+                const nav = document.getElementById(`nav-item-${k}`);
+                if (sec) sec.style.display = (k === pageKey)  'block'  'none';
+                if (nav) {
+                    if (k === pageKey) nav.classList.add('active');
+                    else nav.classList.remove('active');
+                }
+            });
+
+             Закрываем мобильное меню при переходе
+            if ($('#keycraftNavbar').hasClass('show')) {
+                $('#keycraftNavbar').collapse('hide');
+            }
+
+            window.scrollTo({ top 0, behavior 'smooth' });
+        }
+
+        function handleFilterChange() {
+            currentPage = 1;
+            renderCatalogTable();
+        }
+
+         Отрисовка таблицы каталога с учетом поиска, фильтров и пагинации
+        function renderCatalogTable() {
+            const searchVal = (document.getElementById('table-search-input').value  '').toLowerCase().trim();
+            const factorVal = document.getElementById('table-filter-factor').value;
+            const switchVal = document.getElementById('table-filter-switch').value;
+
+            const filtered = keyboardCatalog.filter(item = {
+                const matchSearch = item.name.toLowerCase().includes(searchVal) 
+                                    item.id.toLowerCase().includes(searchVal) 
+                                    item.switchModel.toLowerCase().includes(searchVal) 
+                                    item.options.toLowerCase().includes(searchVal);
+                const matchFactor = (factorVal === 'ALL')  item.factor === factorVal;
+                const matchSwitch = (switchVal === 'ALL')  item.switchType === switchVal;
+                return matchSearch && matchFactor && matchSwitch;
+            });
+
+            const totalPages = Math.max(1, Math.ceil(filtered.length  itemsPerPage));
+            if (currentPage  totalPages) currentPage = totalPages;
+
+            const startIdx = (currentPage - 1)  itemsPerPage;
+            const pageItems = filtered.slice(startIdx, startIdx + itemsPerPage);
+
+            const tbody = document.getElementById('bootstrap-table-body');
+            tbody.innerHTML = '';
+
+            if (pageItems.length === 0) {
+                tbody.innerHTML = `
+                    tr
+                        td colspan=9 class=text-center py-4 text-muted
+                            i class=fas fa-search mr-2i По выбранным критериям сборок не найдено. Попробуйте сбросить фильтр.
+                        td
+                    tr
+                `;
+            } else {
+                pageItems.forEach(item = {
+                    let badgeClass = 'badge-success';
+                    if (item.status === 'Хит продаж') badgeClass = 'badge-primary';
+                    if (item.status === 'Под заказ') badgeClass = 'badge-warning text-dark';
+                    if (item.status === 'Новинка') badgeClass = 'badge-info';
+
+                    const tr = document.createElement('tr');
+                    if (item.id === lastAddedId) {
+                        tr.className = 'row-newly-added';
+                    }
+
+                    const safeName = item.name.replace('g, );
+                    const safeDesc = (item.desc  'Кастомная сборка из каталога KeyCraft.').replace('g, );
+
+                    tr.innerHTML = `
+                        td class=text-center font-weight-bold text-secondary${item.id}td
+                        td class=font-weight-bold${item.name}td
+                        tdspan class=badge badge-light border font-weight-bold${item.factor}spantd
+                        td
+                            div class=font-weight-medium${item.switchType}div
+                            small class=text-muted${item.switchModel}small
+                        td
+                        td class=small${item.caseMaterial}td
+                        td class=small text-secondary${item.options}td
+                        td class=text-right font-weight-bold text-nowrap${Number(item.price).toLocaleString('ru-RU')} ₽td
+                        td class=text-centerspan class=badge ${badgeClass} px-2 py-1${item.status}spantd
+                        td class=text-center text-nowrap
+                            button type=button class=btn btn-sm btn-outline-primary mr-1 title=Подробная спецификация onclick=openProductModal('${safeName}', '${item.id}', '${item.factor}', '${item.switchType} (${item.switchModel})', '${item.caseMaterial}', '${item.options}', '${Number(item.price).toLocaleString('ru-RU')} ₽', '${safeDesc}')
+                                i class=far fa-eyei
+                            button
+                            button type=button class=btn btn-sm btn-outline-danger title=Удалить сборку onclick=deleteTableItem('${item.id}')
+                                i class=far fa-trash-alti
+                            button
+                        td
+                    `;
+                    tbody.appendChild(tr);
+                });
+            }
+
+             Обновляем счетчики
+            document.getElementById('table-shown-count').textContent = pageItems.length;
+            document.getElementById('table-total-count').textContent = filtered.length;
+            document.getElementById('table-current-page-label').textContent = `${currentPage} из ${totalPages}`;
+            document.getElementById('nav-models-count').textContent = keyboardCatalog.length;
+            document.getElementById('navbar-total-label').textContent = `${keyboardCatalog.length} моделей`;
+            document.getElementById('catalog-header-badge').textContent = `Всего позиций ${keyboardCatalog.length}`;
+
+            renderPaginationControls(totalPages);
+        }
+
+        function renderPaginationControls(totalPages) {
+            const pagEl = document.getElementById('table-pagination');
+            pagEl.innerHTML = '';
+
+            const prevLi = document.createElement('li');
+            prevLi.className = `page-item ${currentPage === 1  'disabled'  ''}`;
+            prevLi.innerHTML = `a class=page-link href=javascriptvoid(0) onclick=goToTablePage(${currentPage - 1})« Назадa`;
+            pagEl.appendChild(prevLi);
+
+            for (let p = 1; p = totalPages; p++) {
+                const li = document.createElement('li');
+                li.className = `page-item ${p === currentPage  'active'  ''}`;
+                li.innerHTML = `a class=page-link href=javascriptvoid(0) onclick=goToTablePage(${p})${p}a`;
+                pagEl.appendChild(li);
+            }
+
+            const nextLi = document.createElement('li');
+            nextLi.className = `page-item ${currentPage === totalPages  'disabled'  ''}`;
+            nextLi.innerHTML = `a class=page-link href=javascriptvoid(0) onclick=goToTablePage(${currentPage + 1})Вперед »a`;
+            pagEl.appendChild(nextLi);
+        }
+
+        function goToTablePage(pageNum) {
+            currentPage = pageNum;
+            renderCatalogTable();
+        }
+
+        function resetTableFilters() {
+            document.getElementById('table-search-input').value = '';
+            document.getElementById('header-quick-search').value = '';
+            document.getElementById('table-filter-factor').value = 'ALL';
+            document.getElementById('table-filter-switch').value = 'ALL';
+            currentPage = 1;
+            renderCatalogTable();
+        }
+
+        function syncHeaderSearch(val) {
+            const tableInput = document.getElementById('table-search-input');
+            if (tableInput) {
+                tableInput.value = val;
+                currentPage = 1;
+                renderCatalogTable();
+            }
+        }
+
+        function deleteTableItem(id) {
+            const idx = keyboardCatalog.findIndex(item = item.id === id);
+            if (idx !== -1) {
+                const removed = keyboardCatalog.splice(idx, 1)[0];
+                renderCatalogTable();
+                showToastAlert(`Сборка «${removed.name}» (${removed.id}) удалена из каталога.`, 'warning');
+            }
+        }
+
+         Добавление новой сборки через форму
+        function handleBootstrapAddSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('add-name').value.trim();
+            const sku = document.getElementById('add-sku').value.trim()  `KC-00${keyboardCatalog.length + 1}`;
+            const factor = document.getElementById('add-factor').value;
+            const caseMat = document.getElementById('add-case').value;
+            const price = parseInt(document.getElementById('add-price').value, 10)  15900;
+            const switchModel = document.getElementById('add-switch-model').value.trim()  'Custom Switch';
+            const desc = document.getElementById('add-desc').value.trim()  'Пользовательская кастомная сборка.';
+
+            const switchTypeRadio = document.querySelector('input[name=addSwitchType]checked');
+            const switchType = switchTypeRadio  switchTypeRadio.value  'Линейные';
+
+            const checkedOpts = Array.from(document.querySelectorAll('.add-opt-checkchecked')).map(cb = cb.value);
+            const optionsStr = checkedOpts.length  checkedOpts.join(', ')  'Базовая комплектация';
+
+            lastAddedId = sku;
+
+            keyboardCatalog.unshift({
+                id sku,
+                name name,
+                factor factor,
+                switchType switchType,
+                switchModel switchModel,
+                caseMaterial caseMat,
+                options optionsStr,
+                price price,
+                status 'Новинка',
+                desc desc
+            });
+
+             Подготовка следующего артикула
+            const nextCode = `KC-${String(keyboardCatalog.length + 1).padStart(3, '0')}`;
+            document.getElementById('add-sku').value = nextCode;
+
+            currentPage = 1;
+            renderCatalogTable();
+            showSitePage('table');
+            showToastAlert(`Сборка «${name}» (${sku}) успешно добавлена в каталог и выделена в первой строке таблицы!`, 'success');
+        }
+
+        function updateFileLabel(input) {
+            const label = document.getElementById('customFileLabel');
+            if (input.files && input.files.length  0) {
+                label.textContent = input.files[0].name;
+            } else {
+                label.textContent = 'Выберите изображение...';
+            }
+        }
+
+        function resetFileLabel() {
+            document.getElementById('customFileLabel').textContent = 'Выберите изображение...';
+        }
+
+         Авторизация и регистрация
+        function handleLoginSubmit(event) {
+            event.preventDefault();
+            const loginVal = document.getElementById('login-email').value.trim();
+            document.getElementById('header-user-status').textContent = loginVal;
+            document.getElementById('topbar-user-name').textContent = loginVal;
+            showToastAlert(`Добро пожаловать в клуб KeyCraft, ${loginVal}! Вы успешно вошли в личный кабинет.`, 'success');
+        }
+
+        function handleRegisterSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('reg-name').value.trim();
+            const nick = document.getElementById('reg-nickname').value.trim();
+            const pass = document.getElementById('reg-pass').value;
+            const passConfirm = document.getElementById('reg-pass-confirm').value;
+
+            if (pass !== passConfirm) {
+                showToastAlert('Ошибка регистрации пароль и подтверждение пароля не совпадают.', 'danger');
+                return;
+            }
+
+            document.getElementById('header-user-status').textContent = nick;
+            document.getElementById('topbar-user-name').textContent = `${nick} (${name})`;
+            showToastAlert(`Поздравляем, ${name}! Профиль «${nick}» успешно зарегистрирован и активирован.`, 'success');
+        }
+
+        function handleNewsletterSubmit(event) {
+            event.preventDefault();
+            const emailInput = document.getElementById('footer-newsletter-email');
+            const email = emailInput.value.trim();
+            emailInput.value = '';
+            showToastAlert(`Адрес ${email} подписан на рассылку анонсов Group Buy!`, 'info');
+        }
+
+         Открытие модального окна спецификации
+        function openProductModal(title, id, factor, switches, caseMat, options, price, desc) {
+            document.getElementById('productDetailModalTitle').textContent = title;
+            document.getElementById('modal-model-id').textContent = id;
+            document.getElementById('modal-model-factor').textContent = factor;
+            document.getElementById('modal-model-switches').textContent = switches;
+            document.getElementById('modal-model-case').textContent = caseMat;
+            document.getElementById('modal-model-options').textContent = options;
+            document.getElementById('modal-model-price').textContent = price;
+            document.getElementById('modal-model-desc').textContent = desc;
+            $('#productDetailModal').modal('show');
+        }
+
+         Уведомление Bootstrap Alert
+        function showToastAlert(message, type = 'success') {
+            const container = document.getElementById('global-alert-container');
+            container.innerHTML = `
+                div class=alert alert-${type} alert-dismissible fade show shadow-sm mb-4 role=alert
+                    i class=fas fa-bell mr-2i strongKeyCraftstrong ${message}
+                    button type=button class=close data-dismiss=alert aria-label=Закрыть
+                        span aria-hidden=true&times;span
+                    button
+                div
+            `;
+        }
+
+        window.addEventListener('DOMContentLoaded', () = {
+            renderCatalogTable();
+        });
+    script
+script
+   Убираем href=# у всех ссылок навигации и пагинации, чтобы Google Sites не открывал aboutblank
+  document.querySelectorAll('a[href=#], a.nav-link, a.page-link').forEach(function(link) {
+    link.removeAttribute('href');
+    link.style.cursor = 'pointer';
+  });
+
+   Дополнительно перехватываем любые клики по ссылкам-заглушкам (включая динамически созданные в таблице)
+  document.addEventListener('click', function(e) {
+    const anchor = e.target.closest('a');
+    if (anchor && (!anchor.getAttribute('href')  anchor.getAttribute('href').startsWith('#'))) {
+      e.preventDefault();
+    }
+  }, true);
+script
+body
+html
